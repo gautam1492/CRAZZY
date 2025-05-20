@@ -1,0 +1,205 @@
+    <div class="home-wrapper">
+    <div class="slide-news">
+        <div id="slide-container" class="slide-container">
+            <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-arrow-left fa-lg" style="color: #fcfcfc;"></i></a>
+            <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-arrow-right fa-lg" style="color: #fcfcfc;"></i></a>
+        
+            <div class="dot-container">
+                <div class="dot" onclick="currentSlide(1)"></div> 
+                <div class="dot" onclick="currentSlide(2)"></div> 
+                <div class="dot" onclick="currentSlide(3)"></div> 
+                <div class="dot" onclick="currentSlide(4)"></div> 
+            </div> 
+        </div> 
+        <div class="news-container">
+            <div class="trending">
+                <h2>trending news</h2>
+            </div>
+            <div class="home-news">
+                <img src="nimg1.jpg" alt="imgnewws">
+                <div>
+                    <h4>Diablo 4's Berserk Crossover Is A Huge Wasted Opportunity</h4>
+                    <p>Somehow, Diablo Immortal got all the fun instead.</p>
+                </div>
+            </div>
+            <div class="home-news">
+                <img src="nimg2.jpg" alt="imgnewws">
+                <div>
+                    <h4>Bungie May Have Fixed Destiny 2's Most Frustrating Problem</h4>
+                    <p>Jumping into Destiny 2 as a newcomer, or even returning after a long break.</p>
+                </div>
+            </div>
+            <div class="home-news">
+                <img src="nimg3.jpg" alt="imgnewws">
+                <div>
+                    <h4>Expedition 33 Patch Will Fix One Of The Most Broken Builds In The Game</h4>
+                    <p>The popular Stendhal build for Maelle is getting dialed back a bit this week.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>top games of this week</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box1', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box1', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+
+        <div class="cards-box" id="box1">
+            
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>top trending games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn" onclick="navigate('trending')"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box2', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box2', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+ 
+        <div class="cards-box" id="box2">
+            
+        </div>
+    </div>
+
+    <div class="filler">
+        <div class="cards-topic">
+            <h3>Games you should not missout</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+        </div>
+        <div class="filler-box" id="fillbox">
+
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>new released games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box3', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box3', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+
+        <div class="cards-box" id="box3">
+            
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>action games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box4', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box4', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+
+        <div class="cards-box" id="box4">
+            
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>Puzzle games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box5', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box5', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+
+        <div class="cards-box" id="box5">
+            
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>adventure games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box6', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box6', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+
+        <div class="cards-box" id="box6">
+            
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>racing games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box7', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box7', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+
+        <div class="cards-box" id="box7">
+            
+        </div>
+    </div>
+
+    
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>shooting games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box8', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box8', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+        
+        <div class="cards-box" id="box8">
+            
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="cards-topic">
+            <h3>arcade games</h3>
+            &nbsp;&nbsp;&nbsp;
+            <button class="explore-btn"><i class="fa-solid fa-arrow-right fa-lg" style="color: #1e1e1e;"></i></button>
+            
+            <div class="scroll-btn-container">
+                <button onclick="scrollCards('box9', 'left')" class="scroll-btn">&lt;&lt;</button>
+                <button onclick="scrollCards('box9', 'right')" class="scroll-btn">&gt;&gt;</button>
+            </div>
+        </div>
+    
+        <div class="cards-box" id="box9">
+            
+        </div>
+    </div>
+</div>  
+

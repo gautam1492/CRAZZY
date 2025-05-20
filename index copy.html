@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="PAGES/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Crazzy Games</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div id="logo-container">
+                <h1 class="logo">CRA</h1><h1 class="logo-mid">ZZ</h1><h1 class="logo">Y</h1>
+            </div>
+
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass fa-l search-icon" style="color: #537436;"></i>
+                <input type="text" id="search" placeholder="Search" autocomplete="off" spellcheck="false">   
+            </div>
+
+            <div class="social-icon-container">
+                <button class="social-icon"><i class="fa-brands fa-facebook-f fa-lg" style="color: #9ac84c;"></i></button>
+                <button class="social-icon"><i class="fa-brands fa-instagram fa-lg" style="color: #9ac84c;"></i></button>
+                <button class="social-icon"><i class="fa-brands fa-x-twitter fa-lg" style="color: #9ac84c;"></i></button>
+                <button class="social-icon"><i class="fa-brands fa-youtube fa-lg" style="color: #9ac84c;"></i></button>
+                <button class="social-icon"><i class="fa-brands fa-reddit-alien fa-lg" style="color: #9ac84c;"></i></button>
+                <button class="social-icon"><i class="fa-brands fa-linkedin-in fa-lg" style="color: #9ac84c;"></i></button>
+                <button class="social-icon"><i class="fa-brands fa-discord fa-lg" style="color: #9ac84c;"></i></button>
+
+            </div>
+        </div>
+    </header>
+    <nav class="navbar-container">
+        <a href="#" class="nav-links" onclick="render(home)">HOME</a>
+        <a href="#" class="nav-links" onclick="render(trending)">TRENDING</a>
+        <a href="#" class="nav-links" onclick="render(newrelease)">NEW RELEASE</a>
+        <a href="#" class="nav-links" onclick="render(category)">CATEGORY</a>
+        <a href="#" class="nav-links" onclick="render(leaderboard)">LEADERBOARDS</a>
+        <a href="#" class="nav-links" onclick="render(news)">GAMING NEWS</a>
+        <button><i class="fa-solid fa-gamepad fa-lg" style="color: #9ac84c;"></i> LIVE GAMING</button>
+    </nav>
+    <div id="home-container"></div>
+</body>
+<script src="index.js"></script>
+<script src="PAGES/home.js"></script>
+</html>

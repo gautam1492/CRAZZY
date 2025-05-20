@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="pages/home.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Crazzy Games</title>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <div class="head">
+                <div class="logo-container">
+                    <h1 class="logo">CRA</h1><h1 class="logo-mid">ZZ</h1><h1 class="logo">Y</h1>
+                </div>
+    
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass fa-l search-icon" style="color: #9ac84c;"></i>
+                    <input type="text" id="search" placeholder="Search" autocomplete="off" spellcheck="false">   
+                </div>
+    
+                <div class="social-icon-container">
+                    <button class="social-icon"><i class="fa-brands fa-facebook-f fa-lg" style="color: #9ac84c;"></i></button>
+                    <button class="social-icon"><i class="fa-brands fa-instagram fa-lg" style="color: #9ac84c;"></i></button>
+                    <button class="social-icon"><i class="fa-brands fa-x-twitter fa-lg" style="color: #9ac84c;"></i></button>
+                    <button class="social-icon"><i class="fa-brands fa-youtube fa-lg" style="color: #9ac84c;"></i></button>
+                    <button class="social-icon"><i class="fa-brands fa-reddit-alien fa-lg" style="color: #9ac84c;"></i></button>
+                    <button class="social-icon"><i class="fa-brands fa-linkedin-in fa-lg" style="color: #9ac84c;"></i></button>
+                    <button class="social-icon"><i class="fa-brands fa-discord fa-lg" style="color: #9ac84c;"></i></button>
+                </div>
+                <div class="login-container">
+                  <button id="login" onclick="openModal()"><i class="fa-solid fa-right-to-bracket fa-lg" style="color: #9ac84c;"></i> login/sign-up</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="navbar-container" id="nav">
+        <nav>
+            <a href="#home" class="nav-links" onclick="navigate('home')">HOME</a>
+            <a href="#trending" class="nav-links" onclick="navigate('trending')">TRENDING</a>
+            <a href="#new-release" class="nav-links" onclick="navigate('newrelease')">NEW RELEASE</a>
+            <a href="#category" class="nav-links" onclick="navigate('category')">CATEGORY</a>
+            <a href="#gaming-news" class="nav-links" onclick="navigate('news')">GAMING NEWS</a>
+            <button><i class="fa-solid fa-gamepad fa-lg" style="color: #9ac84c;"></i> LIVE GAMING</button>
+        </nav>
+    </div>
+
+<div class="modal" id="loginModal">
+    <!-- Login Card -->
+    <div class="new-login" id="loginCard">
+        <form action="loginForm">
+            <!-- Logo and heading -->
+            <div class="temp">
+                <div class="logo-container">
+                    <h1 class="logo">CRA</h1><h1 class="logo-mid">ZZ</h1><h1 class="logo">Y</h1>
+                </div>
+            </div>
+            <div class="temp">
+                <h1 class="log-heading">login</h1>
+            </div>
+
+            <!-- Inputs -->
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-user fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="text" placeholder="username" required name="username" class="login-inp" autocomplete="off" spellcheck="false">
+            </div>
+            <br>
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-key fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="password" placeholder="password" required name="password" class="login-inp" autocomplete="off" spellcheck="false">
+            </div>
+            <br>
+            <div class="temp">
+                <button class="login-btn" id="userButton" type="submit"> Login</button>
+            </div>  
+            <div class="temp">
+                <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+            </div> 
+        </form>
+    </div>
+
+    <!-- Register Card -->
+    <div class="new-signup" id="registerCard" style="display: none;">
+        <form action="#">
+            <div class="temp">
+                <div class="logo-container">
+                    <h1 class="logo">CRA</h1><h1 class="logo-mid">ZZ</h1><h1 class="logo">Y</h1>
+                </div>
+            </div>
+            <div class="temp">
+                <h1 class="sign-heading">sign up</h1>
+            </div>
+
+            <!-- Inputs -->
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-circle-user fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="text" placeholder="full name" name="fullname" class="sign-inp" required>
+            </div>
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-mobile fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="text" placeholder="mob. number" name="Mnumber" class="sign-inp" required>
+            </div>
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-envelope fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="email" placeholder="Email" name="email" class="sign-inp" required>
+            </div>
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-user fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="text" placeholder="create username" name="username" class="sign-inp" required>
+            </div>
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-key fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="password" placeholder="create password" class="sign-inp" required>
+            </div>
+            <div class="temp-inp-sign">
+                <i class="fa-solid fa-key fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+                <input type="password" placeholder="confirm password" name="password" class="sign-inp" required>
+            </div>
+            <br>
+            <div class="temp">
+                <button class="login-btn" type="submit">sign up</button>
+            </div>  
+            <div class="temp">
+                <p>already have an account? <a href="#" onclick="showLogin()">login</a></p>
+            </div> 
+        </form>
+    </div>
+</div>
+
+    
+    <div id="wrapper">
+        <div id="index-container">
+
+        </div>
+        
+        <footer class="rockstar-footer">
+            <div class="logo-container-footer">
+                <h1 class="logo" style="font-size: 30pt;">CRA</h1><h1 class="logo-mid" style="font-size: 30pt;">ZZ</h1><h1 class="logo" style="font-size: 30pt;">Y</h1>
+            </div>
+
+            <div class="footer-top">
+                <div class="footer-column">
+                    <a href="#">Contact</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Community Guidelines</a>
+                    <a href="#">Subscribe</a>
+                </div>
+
+                <div class="footer-icons">
+                    <a href="#"><i class="fab fa-x-twitter" style="color: #9ac84c; z-index:2;"></i></a>
+                    <a href="#"><i class="fab fa-instagram" style="color: #9ac84c; z-index:2;"></i></a>
+                    <a href="#"><i class="fab fa-youtube" style="color: #9ac84c; z-index:2;"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f" style="color: #9ac84c; z-index:2;"></i></a>
+                    <a href="#"><i class="fab fa-twitch" style="color: #9ac84c; z-index:2;"></i></a>
+                    <a href="#"><i class="fab fa-discord" style="color: #9ac84c; z-index:2;"></i></a>
+                </div>
+
+                
+            </div>
+
+            <div class="footer-mid">
+                <a href="#">Corporate</a>
+                <a href="#">Privacy</a>
+                <a href="#">Cookie Settings</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Legal</a>
+                <a href="#">Do Not Sell or Share My Personal Information</a>
+            </div>
+
+            <div class="footer-bottom">
+                <span class="site-name">Crazzy games</span>
+                <p>&copy; 2025 Crazzy Games. All Rights Reserved.</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </footer>
+
+        
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

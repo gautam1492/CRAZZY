@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gametemp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="gametemp-wrapper">
+        
+
+        <div class="game-info">
+            <img src="assets/honkai_star_rail.png" alt="honkai">
+            <div class="game-details">
+                <h1>Honkai: Star Rail</h1>
+                <h2>Sci-Fi RPG</h2>
+                <div class="rating" data-rating="3">
+                    <p>Rating ( 3.6★) : &nbsp;&nbsp;</p> 
+                    <div class="star-rating">
+                        <div class="star-rating-top" style="width: 72%;"><!-- dynamically set width -->
+                            ★★★★★
+                        </div>
+                        <div class="star-rating-bottom">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+                <button class="play-btn" onclick="scrollToSection()">Play Now!</button>
+            </div>
+
+            <div class="game-box">
+                <div >
+                    <h2>Description: </h2>
+                </div>
+                <div>
+                    <p style="text-align:justify; font-size:large; margin-top:26px;">
+                        Honkai: Star Rail is a captivating space fantasy RPG that combines turn-based combat with a rich, expansive storyline. Players embark on an interstellar journey across diverse planets, each with unique cultures and challenges. The game features a deep character progression system, strategic battles, and stunning visuals that bring its sci-fi universe to life. With a mix of exploration, puzzle-solving, and narrative depth, Honkai: Star Rail offers an immersive experience for RPG fans. Its engaging plot and polished gameplay make it a standout title in the genre.
+                    </p>
+                </div>
+            </div>
+
+            <div class="game-box">
+                <div style="width: 120px;">
+                    <h2>Genre: </h2>
+                </div>
+                <div style="width: 200px;">
+                    <p style="text-align:left; text-transform:capitalize; font-size:x-large; margin-top:26px; margin-left:0;">
+                        racing
+                    </p>
+                </div>
+            </div>
+            
+            <div class="game-box">
+                <div class="game-rating">
+                    <span><h2>Rating:</h2></span>
+                    <div class="rating-box" id="ratingBox">
+                        <span class="rating-star" data-star="1"></span>
+                        <span class="rating-star" data-star="2"></span>
+                        <span class="rating-star" data-star="3"></span>
+                        <span class="rating-star" data-star="4"></span>
+                        <span class="rating-star" data-star="5"></span>
+                    </div>
+
+                    <span class="selected-rating">(<span id="displayRating">0</span>)</span>
+
+                    <button id="submitBtn">Submit Rating</button>
+
+                    <button id="changeBtn" style="display: none;">Change Rating</button>
+
+
+                    <span id="resultMessage" style="margin-left: 10px;"></span>
+                </div>
+            </div>
+
+            <div class="game-box" style="gap: 30px;" id="Gamesrc">
+                <div style="width: 70%;">
+                    <h1>Honkai: Star Rail Sci-Fi RPG</h1>
+                
+                    <iframe src="https://www.crazygames.com/embed/smash-karts" style="margin-top: 0; border-radius:8px;" frameborder="1" height="500px" width="100%" allowfullscreen></iframe>
+                </div>
+
+                <div style="width: 30%; padding:10px;">
+                    <h2 style="margin-top: 40px;">How to Play Traffic Rider</h2>
+                    <p>
+                        Hit the road and weave through traffic in Traffic Rider, a high-speed motorcycle racing game where you're on the road for an endless road race. The faster you go, the bigger the rewards, so muster up some courage and overtake cars at speeds above 100 km/h to earn bonus points and extra time.
+                        <br><br>
+                        Complete daily rounds to earn in-game currency, which can be used for bike upgrades and new rides. Choose from multiple game modes, including Career, Endless, Time Trial, and Free Ride, each offering unique challenges.
+                        <br><br>
+                        Brace yourself for dynamic weather conditions—riding in the rain adds an extra layer of difficulty, so stay focused and don’t let the thunder throw you off!
+                        <br><br>
+                        Play it safe or push the limits—speeding past traffic earns more rewards, but be careful of oncoming cars! How far can you ride without crashing?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="https://imgs.crazygames.com/traffic-rider-vvq_16x9/20250328101418/traffic-rider-vvq_16x9-cover?metadata=none&quality=70&width=425" alt="NAI CALAL">
+</body>
+<script src="gametemo.js"></script>
+</html>

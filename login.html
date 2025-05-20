@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+        *{
+            font-family:"Oswald", sans-serif ;
+            box-sizing: border-box;
+            user-select: none;
+            color: #fcfcfc;
+        }
+
+        body {
+            background-color: #121317;
+            margin: 0;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .new{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            position: absolute;
+            height: 600px;
+            width: 620px;
+            border: 2px solid white;
+            border-radius: 5%;
+            margin: auto;
+            top: 50px;
+            left: 30%;
+            padding: 10px;
+            backdrop-filter: blur(10px); /* Stronger blur */
+            background-color: #12131766;
+        }
+
+        .logo-container{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            pointer-events: none;
+            left: 0;
+            
+        }
+
+        .logo{
+            font-family: "Archivo Black", sans-serif;
+            color: #fcfcfc;
+            font-size: 23pt;
+            margin: 0;
+            user-select: none;      /* Modern browsers */
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none;  /* Internet Explorer/Edge */
+        }
+        .logo-mid{
+            font-family: "Archivo Black", sans-serif;
+            color: transparent;
+            font-size: 23pt;
+            margin: 0;
+            -webkit-text-stroke:2px #9ac84c;
+            user-select: none;      /* Modern browsers */
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none;  /* Internet Explorer/Edge */
+        }
+
+        .temp{
+            display: flex   ;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            
+        }
+
+        .temp p{
+            font-size: larger;
+        }
+        .temp-inp{
+            display: flex   ;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 60px;
+        }
+
+        .login-inp{
+            width: 440px;
+            padding-left: 50px;
+            padding-top: 10px;
+            margin: auto;
+            border: none;
+            border-bottom: 4px solid #9ac84c;
+            background-color: transparent;
+            font-size: 20pt;
+            color: #fcfcfc;
+            border-radius: 5px;
+        }
+
+        .login-inp:focus{
+            outline: none;
+            box-shadow: none;
+        }
+
+        .login-inp::placeholder{
+            font-size: 18pt;
+            text-transform: capitalize;
+        }
+
+        .log-icon{
+            position: relative;
+            right: 33%;
+            top: 55%;
+        }
+
+        .heading{
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 29pt;
+        }
+
+        .login-btn {
+            margin: auto;
+            width: 460px;
+            padding: 10px;
+            font-size: 16pt;
+            background-color: #9ac84c;
+            border: none;
+            border-radius: 10px;
+            color: #121317;
+            cursor: pointer;
+        }
+
+        /* Modal backdrop */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(6px); /* Background blur */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+    z-index: 999; /* On top */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the login card is centered and not scrollable */
+.modal .new {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transform: none;
+}
+
+/* Prevent body from scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+    </style>
+</head>
+<body>
+    <button onclick="openModal()">Open Login</button>
+    <div class="modal" id="loginModal">
+    <div class="new">
+        <!-- [Your current login content goes here, unchanged] -->
+        <form action="#">
+            <div class="temp">
+            <div class="logo-container">
+                <h1 class="logo">CRA</h1><h1 class="logo-mid">ZZ</h1><h1 class="logo">Y</h1>
+            </div>
+        </div>
+
+        <div class="temp">
+            <h1 class="heading">sign up</h1>
+        </div>
+
+        <div class="temp-inp">
+            <i class="fa-solid fa-circle-user fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+            <input type="text" placeholder="full name" name="name" id="name" class="login-inp" autocomplete="off" spellcheck="false" required >
+        </div>
+        <div class="temp-inp">
+            <i class="fa-solid fa-mobile fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+            <input type="text" placeholder="mob. number" name="mobile number" id="name" class="login-inp" autocomplete="off" spellcheck="false" required>
+        </div>
+        <div class="temp-inp">
+            <i class="fa-solid fa-envelope fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+            <input type="email" placeholder="Email" name="email" id="email" class="login-inp" autocomplete="off" spellcheck="false" required>
+        </div>
+        <div class="temp-inp">
+            <i class="fa-solid fa-user fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+            <input type="text" placeholder="create username" name="username" id="username" class="login-inp" autocomplete="off" spellcheck="false" required>
+        </div>
+        <div class="temp-inp">
+            <i class="fa-solid fa-key fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+            <input type="password" placeholder="create password" name="password" id="Pword" class="login-inp" autocomplete="off" spellcheck="false" required>
+        </div>
+        <div class="temp-inp">
+            <i class="fa-solid fa-key fa-xl log-icon" style="color: #9ac84c; z-index:2;"></i>
+            <input type="password" placeholder="confirm password" name="password" id="Pword" class="login-inp" autocomplete="off" spellcheck="false" required>
+        </div>
+        <br>
+        <div class="temp">
+            <button class="login-btn">sign up</button>
+        </div>  
+        <div class="temp">
+            <p>already have an account? <a href="#">login</a></p>
+        </div> 
+        </form>
+    </div>
+</div>
+    
+
+    <script>
+function openModal() {
+    document.getElementById("loginModal").style.display = "flex";
+    document.body.classList.add("modal-open");
+}
+
+function closeModal() {
+    document.getElementById("loginModal").style.display = "none";
+    document.body.classList.remove("modal-open");
+}
+
+// Optional: Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById("loginModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+</script>
+
+</body>
+</html>

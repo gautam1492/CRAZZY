@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    font-family:"Oswald", sans-serif ;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121317;
+    margin: 0;
+    height: 100%;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 110px;
+    height: 100%;
+    width: 100%;
+    gap: 50px;
+  }
+
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.header{
+    height: 68px;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: #121317;
+}
+
+header {
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    user-select: none;
+    cursor: default;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-right: 40px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.logo-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    left: 2%;    
+    z-index: 20;
+}
+
+.logo{
+    font-family: "Archivo Black", sans-serif;
+    color: #fcfcfc;
+    user-select: none;      /* Modern browsers */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;  /* Internet Explorer/Edge */
+}
+.logo-mid{
+    font-family: "Archivo Black", sans-serif;
+    color: transparent;
+    -webkit-text-stroke:2px #9ac84c;
+    user-select: none;      /* Modern browsers */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;  /* Internet Explorer/Edge */
+}
+
+.search-container
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    right: 10%;
+}
+
+.search-container input
+{
+    width: 200px;
+    text-align: left;
+    padding-left:35px;
+    height: 30px;
+    border: none;
+    border-bottom:1px solid #9ac84c;
+    background-color:#121317;
+    font-size: 11pt;
+    color: #fcfcfc;
+}
+
+.search-container input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.search-container input::placeholder{
+    color: #9ac84c;
+}
+
+.search-icon{
+    background: none;
+    position: absolute;
+    left: 7px;
+    pointer-events: none;
+    user-select: none;      /* Modern browsers */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;  /* Internet Explorer/Edge */
+}
+
+.social-icon-container {
+    display: flex;
+    position: relative;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+}
+
+.login-container{
+    display: flex;
+    position: relative;
+    width: 150px;
+    margin: 0;
+}
+
+#login{
+    height: 35px;
+    width: 100%;
+    color: #fcfcfc;
+    background-color: #121317;
+    border:2px solid #b1b1b1;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 11pt;
+    border-radius: 25px;
+    user-select: none;
+    font-size:medium;
+    cursor: pointer;
+}
+
+.social-icon {
+    top: 3px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border:2px solid #3b3c42;
+    border-radius: 25px;
+    cursor: pointer;
+    user-select: none;      /* Modern browsers */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;  /* Internet Explorer/Edge */
+}
+
+.navbar-container{
+    margin-top: 68px;
+    height:45px;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    position: fixed;
+    justify-content: left;
+    padding-left: 15px;
+    background-color: #121317;
+    z-index: 10;
+}
+
+.nav-links {
+    position: relative;
+    
+    text-align: left;
+    text-decoration: none;
+    color: #fcfcfc;
+    font-family: "Oswald", sans-serif;
+    margin-left: 22px;
+    font-size: 14pt;
+    font-weight: 400;
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav-links::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #9ac84c;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  .nav-links:hover {
+    color: #9ac84c;
+  }
+  
+  .nav-links:hover::after {
+    width: 100%;
+  }
+
+.navbar-container button{
+    height: 80%;
+    width: 140px;
+    color: #fcfcfc;
+    background-color: #121317;
+    border:2px solid #3b3c42;
+    position: relative;
+    left: 45%;
+    font-size: 11pt;
+    border-radius: 25px;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+#index-container{
+    box-sizing: border-box;
+    top:0 ;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo-container-footer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    margin-bottom: 20px;
+}
+
+.rockstar-footer {
+  background-color: #0a0a0c;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow:0px -8px  10px rgba(161, 161, 161, 0.605) ;
+  padding: 50px;
+  font-size: 13pt;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  margin-top: 7px;
+  text-align: left;
+  width: fit-content;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  width: 150px;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 50px;
+  font-size: 25px;
+  margin-top: 50px ;
+  margin-left: 40px ;
+  margin-bottom: 40px ;
+}
+
+.footer-mid{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.footer-mid a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #ccc;
+}
+
+.rockstar-footer a:hover{
+  color: #9ac84c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  color: #555;
+  font-size: 13pt;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.site-name{
+  position: relative;
+  font-size: x-large;
+  right: 25%;
+}
+
+.new-login{
+  display:block;
+  flex-direction: column;
+  justify-content: left;
+  position: absolute;
+  height: 450px;
+  width: 620px;
+  border: 2px solid white;
+  border-radius: 5%;
+  margin: auto;
+  z-index: 100;
+  top: 100px;
+  left: 30%;
+  gap: 10px;
+  padding: 10px;
+  backdrop-filter: blur(10px); /* Stronger blur */
+  background-color: #12131766;
+}
+
+.new-signup{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: absolute;
+    height: 620px;
+    width: 620px;
+    border: 2px solid white;
+    border-radius: 5%;
+    margin: auto;
+    z-index: 1000;
+    top: 50px;
+    left: 30%;
+    padding: 10px;
+    backdrop-filter: blur(10px); /* Stronger blur */
+    background-color: #12131766;
+}
+
+.temp{
+    display: flex   ;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+.temp p{
+    font-size: larger;
+    text-transform: capitalize;
+    margin: auto;
+}
+.temp-inp{
+    display: flex   ;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+}
+
+.temp-inp-sign{
+    display: flex   ;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+}
+
+.login-inp{
+    width: 440px;
+    padding-left: 50px;
+    padding-top: 5px;
+    margin: auto;
+    border: none;
+    border-bottom: 4px solid #9ac84c;
+    background-color: transparent;
+    font-size: 20pt;
+    color: #fcfcfc;
+    border-radius: 5px;
+    user-select: auto;
+}
+
+.sign-inp{
+    width: 440px;
+    padding-left: 50px;
+    padding-top: 0;
+    margin: auto;
+    margin-bottom: 2px;
+    border: none;
+    border-bottom: 4px solid #9ac84c;
+    background-color: transparent;
+    font-size: 20pt;
+    color: #fcfcfc;
+    border-radius: 5px;
+    user-select: auto;
+}
+
+.login-inp:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.sign-inp:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.login-inp::placeholder{
+    font-size: 18pt;
+    text-transform: capitalize;
+}
+
+.log-icon{
+    position: relative;
+    right: 33%;
+    top: 55%;
+}
+
+.log-heading{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 31pt;
+}
+
+.sign-heading{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 29pt;
+}
+
+.heading{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 31pt;
+}
+
+.login-btn {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 460px;
+    padding: 10px;
+    font-size: 19pt;
+    background-color: #9ac84c;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #121317;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+     backdrop-filter: blur(10px); /* Stronger blur */
+    background-color: rgba(18, 19, 23, 0.6);
+    z-index: 999; /* On top */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the login card is centered and not scrollable */
+.modal .new-login, .new-signup {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    transform: none;
+}
+
+/* Prevent body from scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+
+.gametemp-wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 70px;
+    padding-top: 120px;
+}
+
+.game-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: flex-start;
+    padding: 40px;
+    background-color: #fcfcfc33;
+    border-radius: 7px;
+} 
+
+.game-info img{
+    border: #fcfcfc 2px solid ;
+    width: 58%;
+    border-radius: 5px;
+}
+
+.game-details{
+    text-align: left;
+}
+
+.game-details h1{
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2.8rem;
+}
+
+.game-details h2{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    margin-top: 5px;
+}
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  color: #ccc; /* color of empty stars */
+  line-height: 1;
+  
+}
+
+.star-rating-top {
+  color: gold; /* color of filled stars */
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.star-rating-bottom {
+  pointer-events: none;
+}
+
+.rating{
+    display: flex;
+    margin: 0;
+}
+
+.play-btn{
+    margin: auto;
+    margin-top: 60px;
+    width: 90%;
+    padding: 10px;
+    font-size: 19pt;
+    font-weight: bold;
+    background-color: #9ac84c;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #121317;
+    cursor: pointer;
+}
+
+.game-box{
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+
+.game-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+.rating-box {
+  display: flex;
+  font-size: 2.5rem;
+  color: #ccc;
+  cursor: pointer;
+  margin-left: 85px;
+  margin-top: -7px;
+}
+
+.rating-star {
+  display: inline-block;
+
+}
+
+.rating-star::before {
+  content: "★";
+}
+
+.rating-star.active::before {
+  color: gold;
+}
+
+#submitBtn, #changeBtn{
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #9ac84c;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 2px;
+  color: #121317;
+  font-size: large;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.selected-rating {
+  font-size: 1rem;
+}
+
+.game-box h1{
+  font-size: 2rem;
+  margin-bottom: 0;
+}
